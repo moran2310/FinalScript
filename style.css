@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  max-width: 1200px;
+  width: 95%; /* For responsiveness */
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);  text-align: center;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+/* Contact List and Items */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+/* Contact Image and Info */
+.contact-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-img:hover {
+  transform: scale(1.1);
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Icon Size Constraints */
+.icon {
+  width: 50px;   /* Set appropriate width */
+  height: 50px;  /* Set appropriate height */
+  display: inline-block;  /* Keeps the icons inline */
+  overflow: hidden;       /* Ensures no overflow */
+  padding: 5px;           /* Adds some padding around the icon */
+  cursor: pointer;        /* Changes cursor to pointer on hover */
+}
+
+.icon:hover {
+  transform: scale(1.1);  /* Optional: Adds a slight scaling effect on hover */
+  transition: transform 0.2s ease-in-out;  /* Smooth transition */
+}
+
+/* Centering Icons within Container */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Centers icons horizontally */
+  gap: 20px; /* Adds space between icons */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header and Footer */
+header, footer {
+  background: rgba(45, 221, 67, 0.9); /* Adjusted background color for distinction */
+  padding: 15px;
+  text-align: center;
+  color: white; /* Ensures the text stands out */
+  font-size: 18px; /* Makes the text a bit larger for visibility */
+  font-weight: bold; /* Makes the text bold */
+  border-bottom: 1px solid #ddd; /* Optional: Adds a subtle bottom border to the header */
+}
+
+footer {
+  border-top: 1px solid #ddd; /* Adds a subtle top border to separate the footer from content */
+  font-size: 14px; /* Smaller font size for footer */
+  padding: 10px; /* Adjusted padding for consistency */
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  width: 95%; /* For responsiveness */
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8); /* Changed to a light background for readability */
+  text-align: center;
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+/* General Body Background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the header and footer have space */
+  align-items: center;
+}
+
+/* Adjusting Footer Text for Readability */
+footer p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: white; /* Makes sure footer text is visible */
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+  }
+
+  .actions {
+    margin-top: 10px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .container {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .contact-info {
+    font-size: 15px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 75%;
+    padding: 20px;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .container {
+    width: 70%;
+    padding: 25px;
+  }
+
+  .contact-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contact-info {
+    font-size: 17px;
+  }
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .contact-item {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode .contact-info {
+  color: #ffffff;
+}
+
+.dark-mode .actions button {
+  background-color: #333;
+}
+
+.dark-mode .actions button img {
+  filter: invert(1);
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode #searchInput {
+  background-color: #333;
+  color: #ffffff;
+}
+
